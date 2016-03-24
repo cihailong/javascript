@@ -5,7 +5,9 @@
 ## 基础逻辑处理部分
 
   >变量 数据类型
+
   >分支和循环
+
   >函数（对语言的扩展）
 ```javascript
 var a=1;                //Number
@@ -16,6 +18,7 @@ var a=function(){}  //function
 var a=true         //Boolean
 var a=undefined
 var a=null
+```
 ### 运算符
 ```
 + - / * %
@@ -46,8 +49,8 @@ whlie(){
 }do{
 	
 }
-while()
-```
+while()```
+
 ### 函数
 ```
 function xx(){
