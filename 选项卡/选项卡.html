@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>     
+	 window.onload=function(){
+    	
+    	var lis=document.getElementsByClassName("item");
+    	var downMenu=document.getElementsByClassName("downMenu");
+for(var i=0;i<lis.length;i++){
+	lis[i].index=i;
+	lis[i].onmouseover=function(){
+		for(var j=0;j<lis.length;j++){
+			downMenu[j].style.display="none";
+		}
+	downMenu[this.index].style.display="block";
+}
+lis[i].onmouseout=function(){
+	for(var j=0;j<lis.length;j++){
+		downMenu[j].style.display="none";
+        }
+      }
+    }
+}
+
+
+	</script>
+	<style>
+	  ul,li{
+		padding: 0;
+		margin:0;
+		list-style:none;
+	}
+	a{
+		text-decoration: none;
+		display:block;
+		color:#000;
+	}
+	.box{
+		width:1200px;
+		height:40px;
+		background: #e4e4e4;
+		margin:300px auto;
+		position:relative; 
+	}
+	.tab{
+		width:1200px;
+		height:40px;
+	}
+	.tab li{
+		float: left;
+		border-right:1px solid #fff;
+		width:259px;
+		height:40px;
+		text-align: center;
+		line-height: 40px;
+	}
+	.tab .first{
+		width:159px;
+		height:40px;
+		border-top:2px solid #0085d0;
+	}
+	.tab a{
+		display:block;
+	}
+	.tab a:hover{
+		background:#f3f3f3;
+		color:#0085d0;
+
+	}
+	.downMenu{
+		width:1200px;
+		height:40px;
+		background: #fff;
+		box-shadow: 0px 3px 3px #E4E4E4;
+		position: absolute;
+		top:41px;
+		left:0;
+		display:none;
+		z-index: 999999;
+	}
+	.downMenu_h1{
+		width:168px;
+		height:40px;
+		float:left;
+		font-size:12px;
+		display:inline;
+	}
+    .downMenu a:hover{
+             
+              color:blue;
+}
+	.downMenu_h2{
+		width:168px;
+		height:40px;
+		float:left;
+		font-size:12px;
+	}
+	.downMenu_h3{
+		width:168px;
+		height:40px;
+		float:left;
+		font-size:12px;
+	}
+	.downMenu_h4{
+		width:168px;
+		height:40px;
+		float:left;
+		font-size:12px;
+	}
+	</style>
+</head>
+<body>
+	
+		<div class="box">
+		<ul class="tab">
+			<li class="first"><a href="javascript:;">首页</a>
+			<li class="item"><a href="javascript:;">移动商城</a>
+                              <div class="downMenu">
+                              <div class="downMenu_h1"><a href="#">买手机</a></div>
+			                   <div class="downMenu_h1"><a href="#">办套餐</a></div>
+                               <div class="downMenu_h1"><a href="#">办业务</a></div>
+                                 <div class="downMenu_h1"><a href="#">调配件</a></div>
+                                  <div class="downMenu_h1"><a href="#">立即充值</a></div>
+                                   <div class="downMenu_h1"><a href="#">个人中心</a></div>
+						</div>
+			<li class="item"><a href="javascript:;">我的移动</a>
+			<div class="downMenu">
+			                   <div class="downMenu_h2"><a href="#">我的账户</a></div>
+			                   <div class="downMenu_h2"><a href="#">套餐余量查询</a></div>
+                               <div class="downMenu_h2"><a href="#">业务状况查询</a></div>
+                                 <div class="downMenu_h2"><a href="#">详单查询</a></div>
+                                  <div class="downMenu_h2"><a href="#">账单查询</a></div>
+                                   <div class="downMenu_h2"><a href="#">积分查询</a></div>
+                                   <div class="downMenu_h2"><a href="#">星级查询</a></div>
+			</div>
+			<li class="item"><a href="javascript:;">网上营业厅</a>
+                       <div class="downMenu">
+                                <div class="downMenu_h3"><a href="#">网上存值</a></div>
+			                   <div class="downMenu_h3"><a href="#">话费服务</a></div>
+                               <div class="downMenu_h3"><a href="#">资费套餐</a></div>
+                                 <div class="downMenu_h3"><a href="#">选号入网</a></div>
+                                  <div class="downMenu_h3"><a href="#">优惠购机</a></div>
+                                   <div class="downMenu_h3"><a href="#">业务办理</a></div>
+                                   <div class="downMenu_h3"><a href="#">优惠促销</a></div>
+                       </div>
+			
+			<li class="item"><a href="javascript:;">服务与支持</a>
+                      <div class="downMenu">
+                       <div class="downMenu_h4"><a href="#">网上存值</a></div>
+			                   <div class="downMenu_h4"><a href="#">话费服务</a></div>
+                               <div class="downMenu_h4"><a href="#">资费套餐</a></div>
+                                 <div class="downMenu_h4"><a href="#">选号入网</a></div>
+                                  <div class="downMenu_h4"><a href="#">优惠购机</a></div>
+                                   <div class="downMenu_h4"><a href="#">业务办理</a></div>
+                                   <div class="downMenu_h4"><a href="#">优惠促销</a></div>
+                      </div>           
+		             </ul>
+	               </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="in.js"></script>
+	<script>
+	var cH=document.documentElement.clientHeight;
+	var floor=$(".floor");
+	var floorArr=[];
+	for(var i=0;i<floor.length;i++){
+		floorArr.push(floor[i].offsetTop);
+	}
+	window.onscroll=function(){
+		var obj=document.body.scrollTop?document.body:document.documentElement;
+		var tops=obj.scrollTop;
+		for(var i=0;i<floor.length;i++){
+			if(tops+cH>=floorArr[i]+200){
+				var imgs=$("img",floor[i]);
+				for(var j=0;j<imgs.length;j++){
+					imgs[j].src=imgs[j].title;
+				}
+			}
+		}
+	}
+
+	</script>
+	<style>
+	.head,.end{
+		width: 940px;
+		height:50px;
+		background: red;
+		margin:0 auto;
+	}
+	.floor{
+		width: 740px;
+		height:450px;
+		text-align: center;
+        margin:0 auto;
+	}
+	</style>
+</head>
+<body>
+	<div class="head"></div>
+	<div class="floor"><img title="./image/banner1.jpg"></div>
+	<div class="floor"><img title="./image/banner2.jpg"></div>
+	<div class="floor"><img title="./image/banner3.jpg"></div>
+	<div class="floor"><img title="./image/banner4.jpg"></div>
+	<div class="floor"><img title="./image/banner5.jpg"></div>
+	<div class="floor"><img title="./image/banner6.jpg"></div>	
+	<div class="end"></div>
+</body>
+</html>
